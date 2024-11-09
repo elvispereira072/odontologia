@@ -1,0 +1,260 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+/* Estilo para o corpo */
+body {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    background: #f4f4f4;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background: #00a8ff;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+header ul li a:hover {
+    background: red;
+    border-radius: 5px;
+}
+
+/* Estilo para a seção hero */
+.hero-content {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: url('assets/hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.hero-content .cta-button {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: #00a8ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-content .cta-button:hover {
+    background: red;
+}
+
+/* Estilo para as seções */
+section {
+    padding: 4rem 1rem;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #00a8ff;
+}
+
+/* Estilo para as highlights */
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.highlight {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para os serviços */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.service i {
+    font-size: 3rem;
+    color: #00a8ff;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para a equipe */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.team-member {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para os depoimentos */
+.testimonials {
+    text-align: center;
+}
+
+.testimonial {
+    background: #f4f4f4;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.testimonial h4 {
+    margin-top: 1rem;
+    color: #00a8ff;
+}
+
+/* Estilo para o rodapé */
+.footer {
+    background: #00a8ff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    header ul.showing {
+        display: flex;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Menu inicial escondido em dispositivos móveis */
+.nav-list {
+    display: none;
+}
+
+/* Mostrar menu quando a classe 'show' é adicionada */
+.nav-list.show {
+    display: block;
+}
+
+/* Configurações de estilo adicionais para dispositivos móveis */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-list.show {
+        display: flex;
+    }
+    .nav-list li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+}
